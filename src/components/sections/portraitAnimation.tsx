@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Landscape from "./landscape";
 import Form from "./form";
 import { ReelNFT } from "components/animations";
+import CenterButtons from "./centerButtons";
 
 export const PortraitAnimation = () => {
   const [scene, setscene] = useState<number>(0);
@@ -70,11 +71,12 @@ export const PortraitAnimation = () => {
               xl:h-1/3 xl:w-9/12 
               md:h-1/2 md:w-9/12 
               lg:h-1/2 lg:w-9/12 
-              sm:h-1/3 
-              sm:mt-[60px]
+              sm:h-1/3
               p-xl sm:text-globe-sm md:text-globe-lg text-globe-lg 
               text-left tracking-wider leading-loose
+              
               "
+              style={{marginBottom: "12rem"}}
             >
               <div
                 className="shadow-[-20px_0_0_0_#005756,20px_0_0_0_#005756,0_-20px_0_0_#005756,0_20px_0_0_#005756]
@@ -87,7 +89,7 @@ export const PortraitAnimation = () => {
                   <motion.p
                     className="relative p-xl bg-[#00232E] text-white sm:border-[7px] border-[14px] border-[#005756] 
                               shadow-[-12px_5px_0_0_#929AFF,12px_5px_0_0_#929AFF,5px_-12px_0_0_#929AFF,5px_12px_0_0_#929AFF]
-                              sm:shadow-[-6px_5px_0_0_#929AFF,6px_5px_0_0_#929AFF,5px_-6px_0_0_#929AFF,5px_6px_0_0_#929AFF]"
+                              sm:shadow-[-6px_5px_0_0_#929AFF,6px_5px_0_0_#929AFF,5px_-6px_0_0_#929AFF,5px_6px_0_0_#929AFF] text-sm"
                     style={{
                       opacity: opacity,
                       transition:
@@ -119,7 +121,7 @@ export const PortraitAnimation = () => {
                     transform sm:-translate-x-1/2 translate-x-1/2 sm:-translate-y-1/2
                     bg-white text-black 
                     border-4 border-secondary box-border shadow-lg p-lg sm:p-sm md:p-md 
-                    hover:shadow-black hover:bg-stone-300 hover:font-bold"
+                    hover:shadow-black hover:bg-stone-300 hover:font-bold text-sm"
                     onClick={textAnimation}
                   >
                     Continuar
@@ -160,8 +162,8 @@ export const PortraitAnimation = () => {
               <div className="order-1 col-span-3 sm:col-span-3 md:col-span-3 lg:col-span-1 xl:col-span-1 2xl:col-span-1 flex">
                 <Image
                   className="relative top-1/3 sm:top-1/4 xl:top-[10%] lg:top-[10%] h-min mx-auto sm:max-w-xs"
-                  width={400}
-                  height={400}
+                  width={230}
+                  height={230}
                   src="/Pictures/logo/LogoRK.png"
                   alt="rose title"
                   style={{ objectFit: "contain" }}
@@ -169,22 +171,20 @@ export const PortraitAnimation = () => {
               </div>
 
               <div
-                className="order-2  sm:order-3 
-              col-span-3 sm:col-span-3 md:col-span-3 lg:col-span-1 xl:col-span-1 2xl:col-span-1
+                className="order-3 
+              col-span-3 md:col-span-3 lg:col-span-1
               flex w-full h-full
-              sm:items-end
               items-center
-
               justify-center 
               text-center
               "
+                style={{ paddingBottom: 40 }}
               >
                 <button
                   onClick={handleScene}
                   className="text-tertiary
-                      h-fit w-fit 
                       sm:mb-md
-                      sm:text-title-sm md:text-title-md lg:text-title-lg text-title-lg 
+                      text-md
                       font-gaming border-4
                       border-tertiary
                       p-xl sm:p-lg md:p-lg
@@ -195,7 +195,7 @@ export const PortraitAnimation = () => {
                 </button>
               </div>
 
-              <div className="order-3 sm:order-2 col-span-3 sm:col-span-3 md:col-span-3 lg:col-span-1 xl:col-span-1 2xl:col-span-1">
+              <div className="order-2 col-span-3 sm:col-span-3 md:col-span-3 lg:col-span-1 xl:col-span-1 2xl:col-span-1">
                 <div className="relative top-1/2 xl:top-1/4 lg:top-1/4 md:top-[10%] sm:top-[10%] text-center">
                   <button
                     className=" relative w-[150px] h-[150px]
@@ -220,11 +220,11 @@ export const PortraitAnimation = () => {
 
       {scene === 2 && (
         <div className="flex flex-col space-y-4 w-screen h-screen bg-black overflow-hidden">
-          <h2 className="text-white text-center sm:text-title-sm text-title-md mt-[38px]">
+          <h2 className="text-white text-center text-sm mt-[38px]">
             Sé parte del cambio
           </h2>
-          <ReelNFT /> 
-          <Form />
+          <ReelNFT />
+          <CenterButtons/>
         </div>
       )}
     </>

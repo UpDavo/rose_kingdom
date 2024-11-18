@@ -19,6 +19,16 @@ const nextConfig = {
     unoptimized: true,
   },
   output: "export",
-}
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Evita que se resuelvan módulos de Node.js en el cliente
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
