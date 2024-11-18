@@ -14,12 +14,12 @@ export const PortraitAnimation = () => {
   const [opacity, setOpacity] = useState(1);
 
   const dialogs = [
-    "Rose Kingdom no es solo un proyecto más. Es un experimento social en la Web 3.0, nacido de la idea de que blockchain puede hacer el mundo mejor.",
-    "Su esencia se basa en la construcción de una comunidad descentralizada y open source con el objetivo de impactar el futuro de la sociedad.",
-    "Este experimento social es fruto de la colaboración entre NFTs LATAM Art y diversas organizaciones y comunidades con ideales compartidos.",
-    "En Rose Kingdom, cada portador de un NFT es un miembro fundador y pionero, sin líderes.",
-    "Todos tienen voz y voto, pueden proponer ideas y proyectos, y organizarse para desarrollar iniciativas dentro del ecosistema.",
-    "Ustedes son los verdaderos artífices de Rose Kingdom.",
+    "¡Bienvenido a Rose Kingdom! Esto no es solo un proyecto más, es un experimento social en la Web 3.0, nacido de la idea de que blockchain puede hacer del mundo un lugar mejor.",
+    "Nuestro objetivo principal es construir, conjuntamente, las bases para el desarrollo de una meta comunidad descentralizada y de código abierto con un solo propósito: unir esfuerzos para impactar positivamente el futuro de nuestra sociedad mediante la colaboración e intercambio de conocimientos y recursos. ¡Tu creatividad será nuestra guía!",
+    "Al rededor de mundo existen más de 1000 millones de voluntarios en diferentes organizaciones, que aportan millones de horas de tiempo para crear un mundo mejor.",
+    "El mundo no carece de recursos ni de voluntad para cambiar, pero las fuerzas estan dispersas. Rose Kingdom busca resolver este problema, conectando a voluntarios y organizaciones alinean sus fuerzas para lograr lo imposible.",
+    "Rose Petal es el token de nuestra comunidad, con ellos, puedras participar en toma de decisiones, colaborar en proyectos y aportar ideas que generen valor para todos. Este es solo el comienzo de una gran aventura. ¡Juntos, moveremos montañas!",
+    "¿Listo para comenzar tu aventura? Reclama 100,000 tokens GRATIS como símbolo de bienvenida, y, si te unes como voluntario, ¡ganarás 1 millón adicional! Ayuda a construir este mundo donde la colaboración transforma sueños en realidad.",
   ];
 
   const handleScene = () => {
@@ -37,21 +37,24 @@ export const PortraitAnimation = () => {
   };
 
   useEffect(() => {
-    if (scene != 1) return;
+    if (scene !== 1) return;
+  
     const intervalId = setInterval(() => {
       const currentDialog = dialogs[dialogIndex];
-
-      if (characterIndex === currentDialog.length) {
+  
+      if (characterIndex >= currentDialog.length) {
         clearInterval(intervalId);
       } else {
-        setCharacterIndex(characterIndex + 1);
+        setCharacterIndex((prev) => prev + 1);
       }
-    }, 1);
-
+    }, 100); // Intervalo de 100ms
+  
     return () => {
       clearInterval(intervalId);
     };
-  }, [characterIndex, scene, textAnimation]);
+  }, [characterIndex, scene, dialogIndex, dialogs]);
+  
+
 
   return (
     <>
@@ -76,7 +79,7 @@ export const PortraitAnimation = () => {
               text-left tracking-wider leading-loose
               
               "
-              style={{marginBottom: "12rem"}}
+              style={{ marginBottom: "17rem" }}
             >
               <div
                 className="shadow-[-20px_0_0_0_#005756,20px_0_0_0_#005756,0_-20px_0_0_#005756,0_20px_0_0_#005756]
@@ -224,7 +227,7 @@ export const PortraitAnimation = () => {
             Sé parte del cambio
           </h2>
           <ReelNFT />
-          <CenterButtons/>
+          <CenterButtons />
         </div>
       )}
     </>
