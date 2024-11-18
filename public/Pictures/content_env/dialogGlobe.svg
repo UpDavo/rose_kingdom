@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 200">
+
+
+    <g>
+        <path d="M0 30 L0 170 L10 170 L10 180 L20 180 L20 190 L30 190 L30 200 
+        L770 200 L770 190 L780 190 L780 180 L790 180 L790 170 L800 170 L800 30
+        L790 30 L790 20 L780 20 L780 10 L770 10 L770 0 L760 0 L30 0
+        L30 10 L20 10 L20 20 L10 20 L10 30  z" fill="#005756" />
+    </g>
+
+    <g>
+        <path d="M10 30 L10 170 L20 170 L20 180 L30 180 L30 190  
+         L770 190 L770 180 L780 180 L780 170 L790 170 
+        L790 30 L780 30 L780 20 L770 20 L770 10
+        L30 10 L30 20 L20 20 L20 30   z" fill="#FFD1FF" />
+    </g>
+    <g>
+        <path d="M30 20 L30 30 L20 30 L20 170 L30 170 L30 180 L770 180 L770 170 L780 170 
+        L780 30   z" fill="#929AFF" />
+    </g>
+</svg>
