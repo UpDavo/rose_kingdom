@@ -62,7 +62,7 @@ const CenterButtons = () => {
     <div
       id="Form"
       className="absolute top-1/2 right-1/2 transform -translate-y-1/2 translate-x-1/2 
-      w-[95%] sm:w-[50%] h-fit"
+      w-[95%] md:w-[50%] h-fit"
     >
       <div className="bg-white shadow-lg sm:text-sm text-md rounded p-[20px] text-center">
         <Swiper

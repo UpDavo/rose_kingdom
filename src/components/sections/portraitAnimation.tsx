@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Landscape from "./landscape";
-import Form from "./form";
+// import Form from "./form";
 import { ReelNFT } from "components/animations";
 import CenterButtons from "./centerButtons";
 
