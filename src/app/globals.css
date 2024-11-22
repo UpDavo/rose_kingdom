@@ -9,3 +9,7 @@ body {
 html {
   position: fixed; 
 }
+
+:root {
+  --vh: 1vh; /* Fallback */
+}

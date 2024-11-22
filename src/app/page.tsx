@@ -1,17 +1,13 @@
-
-"use client" 
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { PortraitAnimation } from "components/sections";
 import Sound from "components/sound/sound";
 
 export default function Home() {
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     const updateHeight = () => {
-      document.documentElement.style.setProperty(
-        "--vh",
-        `${window.innerHeight * 0.01}px`
-      );
+      setViewportHeight(window.innerHeight);
     };
 
     // Actualiza la altura al cargar la página y al redimensionar
@@ -26,8 +22,12 @@ export default function Home() {
 
   return (
     <main
-      className="h-[calc(var(--vh)_*100)] w-full
-      dark:bg-secundary bg-secundary overflow-hidden"
+      style={{
+        height: `${viewportHeight}px`,
+        width: "100vw",
+        backgroundColor: "var(--color-secundary, #f0f0f0)",
+        overflow: "hidden",
+      }}
     >
       <Sound />
       <PortraitAnimation />
