@@ -65,7 +65,7 @@ export const PortraitAnimation = () => {
                           sequence={[dialogs[dialogIndex]]}
                           wrapper="span"
                           cursor={false}
-                          speed={80}
+                          speed={99}
                         />
                       </motion.span>
                     </motion.p>

@@ -35,7 +35,7 @@ const CenterButtons = () => {
       chainId: 1,
       logoURI:
         "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x37e06DEf1c214CF734023CaAF78225D3C6A73e23/logo.png",
-    }, 
+    },
   ];
 
   const NATIVE = "0x37e06DEf1c214CF734023CaAF78225D3C6A73e23";
@@ -54,33 +54,35 @@ const CenterButtons = () => {
           slidesPerView={1}
         >
           {/* Slide 1: Voluntarios y Organizaciones */}
-          <SwiperSlide className="px-[40px] flex justify-center items-center align-middle content-center justify-items-center">
-            <div className="text-center mt-[10px]"> 
+          <SwiperSlide className="px-[10px] flex justify-center items-center align-middle content-center justify-items-center">
+            <div className="text-center mt-[10px]">
               <div className="px-[20px]" style={{ marginBottom: 10 }}>
                 <h2 className="font-bold sm:text-sm text-md mb-4">
                   Voluntarios
                 </h2>
                 <p className="mb-4 text-sm" style={{ marginTop: 5 }}>
-                  Reclama tus 100,000 Rose Petal Tokens y regístrate como
-                  voluntario para obtener 1 millón adicional.
+                  Toma el primer paso hacia un futuro mejor. Reclama tus 100,000
+                  Rose Petal Tokens y regístrate como voluntario para obtener 1
+                  millón adicional.
                 </p>
               </div>
               <div
-                className="flex gap-[10px] justify-center items-center"
+                className="grid grid-cols-1 gap-[10px] justify-center items-center"
                 style={{ marginBottom: 30 }}
               >
                 <button
-                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 block w-auto text-sm"
-                  style={{ padding: 5 }}
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded mb-4 block text-sm w-full"
+                  style={{ padding: 10 }}
                 >
-                  Ganar 100k Tokens
+                  Reclamar 100k RPT
                 </button>
                 <a
                   href="https://forms.gle/ffVoe5aZZbKXMrJK7"
-                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded block w-auto text-sm"
-                  style={{ padding: 5 }}
+                  target="_blank"
+                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded block text-sm w-full"
+                  style={{ padding: 10 }}
                 >
-                  Ganar 1M Tokens
+                  Reggístrate como voluntario
                 </a>
               </div>
 
@@ -90,14 +92,15 @@ const CenterButtons = () => {
                 </h2>
                 <p className="mb-4 text-sm" style={{ marginTop: 5 }}>
                   ¿Representas una organización? Únete al Rose Kingdom para
-                  coordinar esfuerzos y compartir recursos.
+                  coordinar esfuerzos, compartir recursos y ser parte de nuestra
+                  metacomunidad.
                 </p>
               </div>
               <div className="flex gap-[10px] justify-center items-center">
                 <a
                   href="https://forms.gle/ffVoe5aZZbKXMrJK7"
-                  className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block w-[50%] text-sm"
-                  style={{ padding: 5 }}
+                  className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block w-full text-sm"
+                  style={{ padding: 10 }}
                 >
                   Unirse
                 </a>
@@ -125,7 +128,7 @@ const CenterButtons = () => {
           </SwiperSlide>
 
           {/* Slide 3: Redes Sociales */}
-          <SwiperSlide  className="px-[40px]" >
+          <SwiperSlide className="px-[40px]">
             <div className="text-center">
               <p
                 className="mb-4"
@@ -134,12 +137,29 @@ const CenterButtons = () => {
                 Sigue la historia de Mirai y aprende más sobre el Rose Kingdom
                 en nuestras redes sociales.
               </p>
-              <div className="flex gap-[10px] justify-center items-center space-x-6 mt-6">
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "10px",
+                  marginTop: 40, // Elimina el `mt-6` de Tailwind para un centrado completo
+                }}
+              >
+                <a
+                  href="https://www.instagram.com/mirai.enshi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ fontSize: 70, marginBottom: 15 }}
+                >
+                  <FaInstagram />
+                </a>
                 <a
                   href="https://www.medium.com/@MiraiEnshi.en"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: 30 }}
+                  style={{ fontSize: 70, marginBottom: 15 }}
                 >
                   <FaMedium />
                 </a>
@@ -147,17 +167,9 @@ const CenterButtons = () => {
                   href="https://x.com/Mirai_Enshi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontSize: 30 }}
+                  style={{ fontSize: 70, marginBottom: 15 }}
                 >
                   <FaXTwitter />
-                </a>
-                <a
-                  href="https://www.instagram.com/mirai.enshi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize: 30 }}
-                >
-                  <FaInstagram />
                 </a>
               </div>
             </div>
