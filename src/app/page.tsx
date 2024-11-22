@@ -1,16 +1,19 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { PortraitAnimation } from "components/sections";
 import Sound from "components/sound/sound";
 
 export default function Home() {
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const [viewportHeight, setViewportHeight] = useState(0);
 
   useEffect(() => {
+    // Solo se ejecuta en el cliente
     const updateHeight = () => {
       setViewportHeight(window.innerHeight);
     };
 
-    // Actualiza la altura al cargar la página y al redimensionar
+    // Establece la altura inicial
     updateHeight();
     window.addEventListener("resize", updateHeight);
 
@@ -19,6 +22,11 @@ export default function Home() {
       window.removeEventListener("resize", updateHeight);
     };
   }, []);
+
+  // Si aún no se ha calculado la altura (en el render inicial), devuelve un contenedor vacío.
+  if (viewportHeight === 0) {
+    return null;
+  }
 
   return (
     <main
