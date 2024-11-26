@@ -109,6 +109,7 @@ const CenterButtons = () => {
                 <div className="flex gap-[10px] justify-center items-center">
                   <a
                     href="https://forms.gle/7Qx16yHiMcYLHAxU6"
+                    target="_blank"
                     className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block w-full text-sm"
                     style={{ padding: 10 }}
                   >
